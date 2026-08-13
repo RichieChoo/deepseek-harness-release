@@ -23,8 +23,7 @@ npx @deepseek-ai/dsh web
 - 将上游发布的 `@deepseek-ai/dsh` npm 包和运行时一起打包，用户无需安装 Node.js；
 - 使用 Electron 启动 DSH Web 服务，并在原生桌面窗口中打开；
 - 只监听随机的 `127.0.0.1` 本地端口，不向局域网暴露服务；
-- 为 Apple Silicon（`arm64`）生成可安装的 DMG；
-- 通过 GitHub Actions 自动构建 Release，并提供 SHA-256 校验文件。
+- 为 Apple Silicon（`arm64`）提供可直接安装的 DMG。
 
 如果你要了解 DSH 的能力、配置、插件系统或参与其开发，请以
 [DeepSeek Harness 官方仓库](https://github.com/deepseek-ai/deepseek-harness) 的文档为准。
@@ -37,16 +36,9 @@ npx @deepseek-ai/dsh web
 当前 Release 没有 Apple Developer ID 签名与公证，因为这两项能力需要付费加入 Apple Developer
 Program。macOS 可能因此提示“应用已损坏”或“无法验证开发者”。请按下面的免费临时方案处理。
 
-### 免费临时打开方法
+### 安装后如何打开
 
-安全起见，只从本仓库的 Releases 下载，并先使用 Release 附带的 `SHA256SUMS.txt` 核对 DMG：
-
-```sh
-cd ~/Downloads
-shasum -a 256 DeepSeek-Harness-*-mac-arm64.dmg
-```
-
-确认输出与 `SHA256SUMS.txt` 一致后，将应用拖入 `Applications`，再打开“终端”执行：
+将应用拖入 `Applications` 后，打开“终端”，复制并执行下面两行命令：
 
 ```sh
 xattr -dr com.apple.quarantine "/Applications/DeepSeek Harness.app"
@@ -64,39 +56,10 @@ open "/Applications/DeepSeek Harness.app"
 - Apple Silicon Mac（`arm64`）
 - macOS 11 或更高版本
 
-从源码构建还需要 Node.js 22.19+ 和 npm。
-
-## 本地开发
-
-```sh
-npm install
-npm start
-```
-
-## 构建 DMG
-
-```sh
-npm ci
-npm test
-npm run dist:mac
-```
-
-产物位于 `dist/DeepSeek-Harness-<version>-mac-arm64.dmg`。
-
-DSH 的用户 Profile 会通过符号链接解析随包插件，而 Node.js ESM 无法沿符号链接进入 ASAR，
-因此本项目有意关闭 ASAR。依赖仍随应用完整存放在 `.app/Contents/Resources/app` 内。
-
 应用图标使用上游 DeepSeek Harness 的官方鱼形与 `deepseek` 矢量字标，并组合 `HARNESS` 标识；
 上游资产固定到创建本封装时使用的源码版本。
 
-## 发布
-
-推送 `v*` 版本标签后，GitHub Actions 会在 Apple Silicon runner 上构建 DMG，并将 DMG 与
-SHA-256 校验文件上传到 GitHub Release。
-
-`package.json` 中的 `@deepseek-ai/dsh` 使用精确版本，以保证每个桌面版本都可以重复构建。
-
-### 为什么没有 Apple 签名与公证
+## 为什么没有 Apple 签名与公证
 
 Apple 允许使用免费 Apple Account 和 Xcode 开发、在自己的设备上测试应用；但面向其他用户分发
 时，Developer ID 和 Notary Service 只对 Apple Developer Program 会员开放。该计划目前为每年
@@ -106,6 +69,17 @@ Apple 允许使用免费 Apple Account 和 Xcode 开发、在自己的设备上�
 自签名证书或 ad-hoc 签名都不会被其他 Mac 的 Gatekeeper 信任，无法达到正式公证的效果。
 
 如果未来获得 Developer ID，再启用正式签名与公证即可让用户直接双击打开，无需执行 `xattr`。
+
+## SHA-256 校验
+
+安全起见，请只从本仓库的 Releases 下载。可在“终端”执行下面的命令计算 DMG 的 SHA-256：
+
+```sh
+cd ~/Downloads
+shasum -a 256 DeepSeek-Harness-*-mac-arm64.dmg
+```
+
+确认输出与同一 Release 中 `SHA256SUMS.txt` 记录的值一致，再安装应用。
 
 ## 许可证与声明
 

@@ -48,8 +48,7 @@ function createWindow() {
     minWidth: 860,
     minHeight: 600,
     show: false,
-    titleBarStyle: 'hiddenInset',
-    backgroundColor: '#0b1020',
+    backgroundColor: '#fff',
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
