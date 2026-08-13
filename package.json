@@ -13,6 +13,7 @@
     "start": "electron .",
     "build:icon": "node scripts/build-icon.mjs",
     "test": "node --test",
+    "test:packaged": "node scripts/verify-packaged-app.mjs",
     "pack:mac": "electron-builder --mac dir --arm64",
     "dist:mac": "electron-builder --mac dmg --arm64 --publish never",
     "postinstall": "npm run build:icon && electron-builder install-app-deps"
