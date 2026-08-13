@@ -86,7 +86,8 @@ npm run dist:mac
 DSH 的用户 Profile 会通过符号链接解析随包插件，而 Node.js ESM 无法沿符号链接进入 ASAR，
 因此本项目有意关闭 ASAR。依赖仍随应用完整存放在 `.app/Contents/Resources/app` 内。
 
-应用图标来自上游 DeepSeek Harness 的官方 favicon，并固定到创建本封装时使用的源码版本。
+应用图标使用上游 DeepSeek Harness 的官方鱼形与 `deepseek` 矢量字标，并组合 `HARNESS` 标识；
+上游资产固定到创建本封装时使用的源码版本。
 
 ## 发布
 

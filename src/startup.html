@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DeepSeek Harness</title>
     <style>
-      :root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, #182654, #0b1020 58%); color: #e8edff; }
+      :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #fff; color: #111; }
       main { text-align: center; padding: 2rem; }
-      .mark { width: 68px; height: 68px; margin: 0 auto 24px; border: 2px solid #7397ff; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; box-shadow: 0 0 36px #5277e955; }
-      h1 { margin: 0 0 12px; font-size: 28px; font-weight: 650; letter-spacing: -0.02em; }
-      p { margin: 0; max-width: 520px; color: #aebbe8; line-height: 1.5; }
+      .brand { display: block; width: min(430px, 76vw); height: auto; margin: 0 auto 34px; }
+      .mark { width: 38px; height: 38px; margin: 0 auto 20px; border: 2px solid #111; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; }
+      p { margin: 0; max-width: 520px; color: #666; line-height: 1.5; }
       @keyframes spin { to { transform: rotate(360deg); } }
       @media (prefers-reduced-motion: reduce) { .mark { animation: none; border-color: #7397ff; } }
     </style>
   </head>
   <body>
-    <main><div class="mark" aria-hidden="true"></div><h1>DeepSeek Harness</h1><p id="message"></p></main>
+    <main>
+      <img class="brand" src="brand.png" alt="DeepSeek Harness">
+      <div class="mark" aria-hidden="true"></div>
+      <p id="message"></p>
+    </main>
     <script>
       const params = new URLSearchParams(location.search)
       document.querySelector('#message').textContent = params.get('message') || 'Starting…'
