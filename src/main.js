@@ -75,7 +75,7 @@ async function startServer() {
   const url = `http://${HOST}:${port}`
   const dshHome = join(app.getPath('userData'), 'dsh')
 
-  serverProcess = spawn(process.execPath, ['--expose-internals', dshEntryPoint(), 'web', '--host', HOST, '--port', String(port)], {
+  serverProcess = spawn(process.execPath, ['--expose-internals', dshEntryPoint(), 'web', '--host', HOST, '--port', String(port), '--no-open'], {
     cwd: app.getPath('home'),
     env: buildDshEnvironment({ baseEnvironment: process.env, dshHome }),
     stdio: ['ignore', 'pipe', 'pipe']

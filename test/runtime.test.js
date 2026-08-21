@@ -7,6 +7,7 @@ import { buildDshEnvironment, findAvailablePort, waitForServer } from '../src/ru
 
 const packageJsonPath = fileURLToPath(new URL('../package.json', import.meta.url))
 const packagedRuntimeCheckPath = fileURLToPath(new URL('../scripts/verify-packaged-app.mjs', import.meta.url))
+const mainProcessPath = fileURLToPath(new URL('../src/main.js', import.meta.url))
 
 test('bundles the current DeepSeek Harness release', async () => {
   const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf8'))
@@ -38,4 +39,10 @@ test('buildDshEnvironment preserves the base environment and isolates app data',
   assert.equal(environment.PATH, '/bin')
   assert.equal(environment.DSH_HOME, '/tmp/dsh-home')
   assert.equal(environment.ELECTRON_RUN_AS_NODE, '1')
+})
+
+test('DSH web process never opens the system browser', () => {
+  return readFile(mainProcessPath, 'utf8').then(mainProcess => {
+    assert.match(mainProcess, /'web', '--host', HOST, '--port', String\(port\), '--no-open'/)
+  })
 })
