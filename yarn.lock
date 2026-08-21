@@ -409,6 +409,11 @@
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-agent/-/dsh-agent-0.1.1-rc.1.tgz#6a85cb76dabd2b9386fbe7cb63167d76320b68e1"
   integrity sha512-xE+oni6Ig32Q7QspcUVQqGOa9QYiWwwaqG8ci43+oc2vfslXbD9RJ+qnk9XFKidnVn6cwB95Aw4eeivy0ufDCg==
 
+"@deepseek-ai/dsh-anonymous-user-id@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-anonymous-user-id/-/dsh-anonymous-user-id-0.1.1-rc.1.tgz#be421fd07b9eaa2b77e1d435cd4295fc9cfa731c"
+  integrity sha512-SBXf0wg4HO9PDTb+GFJuSQ8OzARDojF0UhoveD/j1roF6X6pnRjkDsRaYUWg3Uwmim3Bc5Dckutgu9p14hFn1Q==
+
 "@deepseek-ai/dsh-api-gateway@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-api-gateway/-/dsh-api-gateway-0.1.1-rc.1.tgz#44cea470d7882d5e1d2a18ab270abf89e10c64b5"
@@ -429,6 +434,11 @@
   integrity sha512-gef6HqCpdf/aLXH8G4TZ+fIxtq+ebiKDrtr2pslFiopWWrxEvqhZdNPgpiC9A8IDfX3waOxcNxhvmlPHpV2moQ==
   dependencies:
     js-yaml "^4.2.0"
+
+"@deepseek-ai/dsh-atomic-write@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-atomic-write/-/dsh-atomic-write-0.1.1-rc.1.tgz#13c54434d4fa910c0aaac29ad90977cd09da9abd"
+  integrity sha512-8cSMtRK2+5OcyvRhyJRI6lVVuIp+r7MBKGlfESOIdK50OWnVUM35IvaWXuwQrMOI/xJDihyDF+KGF1o0aM1vhg==
 
 "@deepseek-ai/dsh-attachment-local@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -525,6 +535,13 @@
     "@deepseek-ai/dsh-web" "^0.1.1-rc.1"
     "@deepseek-ai/dsh-web-search-deepseek" "^0.1.1-rc.1"
     "@deepseek-ai/dsh-workflow-worker-thread" "^0.1.1-rc.1"
+
+"@deepseek-ai/dsh-bash-local@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-bash-local/-/dsh-bash-local-0.1.1-rc.1.tgz#e7399d667600339b0c6dbe747968e88551f31ed8"
+  integrity sha512-e0hgZMtQYPGSjB2gCJ6nTMlfKF+NXCE9IN6Z3TrpWMF9CQmqqqbyrUcY3+/JTVsoNoUk1aAMxMbXNFtGcYqEng==
+  dependencies:
+    "@deepseek-ai/schemastery" "^3.18.1"
 
 "@deepseek-ai/dsh-bash-sandbox@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -784,6 +801,11 @@
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
+"@deepseek-ai/dsh-code-runtime@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-code-runtime/-/dsh-code-runtime-0.1.1-rc.1.tgz#713d4ed3f494310a3e8fe967dd03f017944724e8"
+  integrity sha512-uha3FJobyShXIMfSuyGCHatbcfY3PA4mATS+hu3JoJy/+9w2Hbish89+eTZBysA4XEG+FRzVVdz9TbAHP3UR9Q==
+
 "@deepseek-ai/dsh-command-compact@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-command-compact/-/dsh-command-compact-0.1.1-rc.1.tgz#c28d77f78ef40a71c60254ceb47a3c23a85ef470"
@@ -819,6 +841,11 @@
   integrity sha512-pRFLE04eJRkH46NMH4F6HvCz7lQMxdua2MifcyAdfuHLRCfGtmzJtlkNJkHd7936rJqHaRmVUz3+UMt86MbyBQ==
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
+
+"@deepseek-ai/dsh-compaction@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-compaction/-/dsh-compaction-0.1.1-rc.1.tgz#23bc569d180c1389fe2915bc52f021536df00f50"
+  integrity sha512-0aDCK6TDF2RXJTrgkmuh6KAGLA8jthR3JKNp0be5RS1U2IIEXwjOLwr5ol4gvSaNLerMlcyLyslkATrHj8hQVw==
 
 "@deepseek-ai/dsh-cordis-client-runner@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -878,6 +905,11 @@
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-fs-sandbox/-/dsh-fs-sandbox-0.1.1-rc.1.tgz#d85e18fb61b3d9f9f5719bd8919b67acd4de0227"
   integrity sha512-tfWU1aVZRxW5j/A9zEaPQUcs//jf5XhnR4QAmAOXtY3EvgHXEXjaJnd9mfKquMZtvZEr+4JWVJo/aj6BERch7Q==
+
+"@deepseek-ai/dsh-fs@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-fs/-/dsh-fs-0.1.1-rc.1.tgz#741f624ece3510dc7efa8bfacfc31b9aac6d705d"
+  integrity sha512-cf+F+spDreyKTFYPYZ5DshRJuq5+H1Wu5xD8078zjy5PO86ROZRIvQl1zc1D8EnWhGSL/8rw4uCuYkhIZNcicQ==
 
 "@deepseek-ai/dsh-goal-round-driver@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -989,6 +1021,13 @@
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
+"@deepseek-ai/dsh-invariants@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-invariants/-/dsh-invariants-0.1.1-rc.1.tgz#a38478673e27153a0e910cb8138322172742ad5a"
+  integrity sha512-tRsr9Qynl3qnFAHE460uALI9jncaD0pr4+hufWTSY73MbOswd6V3KDYy3wWQb9ttDm5XE5GTkB/a56KNnO28XA==
+  dependencies:
+    "@deepseek-ai/schemastery" "^3.18.1"
+
 "@deepseek-ai/dsh-jobs-local@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-jobs-local/-/dsh-jobs-local-0.1.1-rc.1.tgz#dad37da7eadbb7ba376ee34a9d8b8e3d5db91b7c"
@@ -1058,6 +1097,11 @@
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-native-command/-/dsh-native-command-0.1.1-rc.1.tgz#4c703f7c7012e43af926741f9dd9faddecd17755"
   integrity sha512-maVhsVwhIyGuqcMpJWMv4BPc/UaIIdAT4aZmdv9bHzbj3vzRALjAKOEAdhIXtdxtuTKcYbimg402bbEwe/u2OA==
 
+"@deepseek-ai/dsh-output-retention@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-output-retention/-/dsh-output-retention-0.1.1-rc.1.tgz#03b40130a6d6a9c371a4040b0fcaa2297f9530ae"
+  integrity sha512-FapYBIWVzcXioH/lTaBSJlbEM9VQKzSy4fQgzRDLAVP8pMAHAvTaF/tBGQMooP582sPe+XpGh0xwWSJ5X72h6A==
+
 "@deepseek-ai/dsh-permission-presets@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-permission-presets/-/dsh-permission-presets-0.1.1-rc.1.tgz#1115ea5463c9ac96a71592efe3410afd35352a35"
@@ -1122,10 +1166,20 @@
   dependencies:
     koffi "^3.1.0"
 
+"@deepseek-ai/dsh-sandbox@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-sandbox/-/dsh-sandbox-0.1.1-rc.1.tgz#6bbb5c353bcba162dca41c0e702545b1a8aabe41"
+  integrity sha512-+2udF/TLxmZTgNC3RFA7ydN2sD/LIAjkao1bUiU372uOTttGrt31kKbeEqXL9yzfdiLjjuXWhRlbtmvmrf5PKA==
+
 "@deepseek-ai/dsh-schedule@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-schedule/-/dsh-schedule-0.1.1-rc.1.tgz#470a903afa1b2ffcdedc137f15b465f3650ea50f"
   integrity sha512-MvX5rP21/K0RqHTYdyMJIUqpM90En3A2CQiCiIc8BDzFqNJQgEE/+PDeHsxXnaPatmLhC2Sw0fQnZaoJxZ3/WQ==
+
+"@deepseek-ai/dsh-scope@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-scope/-/dsh-scope-0.1.1-rc.1.tgz#03aaee9191a7e3686962fb8347cd5ad5d4330e94"
+  integrity sha512-1Zt+tWDSCoSTAzbaJdSiWHe3pJTpyIqnsCEP3SOyxLIKclsj378rhsrkw+5O6oCRxjDCf0u8BJ+Q5liXREedBg==
 
 "@deepseek-ai/dsh-session-checkpoint-policy@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -1205,10 +1259,22 @@
     "@opentelemetry/resources" "^2.9.0"
     "@opentelemetry/sdk-logs" "^0.220.0"
 
+"@deepseek-ai/dsh-session-telemetry@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-session-telemetry/-/dsh-session-telemetry-0.1.1-rc.1.tgz#4919e49be1e93dd1bd8e66fe8701eba84cdce6b0"
+  integrity sha512-sZVe8bnMZK38J9pZWrObXOFKArV3aKo4cQJ9TgSmo9C1oAY2Mv0HA8rOodUCBX2u74zQ+LuB455iM9V+SCHBXA==
+
 "@deepseek-ai/dsh-session-title-first-prompt-llm@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-session-title-first-prompt-llm/-/dsh-session-title-first-prompt-llm-0.1.1-rc.1.tgz#3601df98b95f93f3301694f0f5e3252e9f22c1d0"
   integrity sha512-BUGmy8sT1IjP0S7slcfBbbjNUxcbSTN/iPPO3itSu9Gvwe6we9PwMEdVQgKozNsaUeax95aunl1KRxG7LbVKUw==
+  dependencies:
+    "@deepseek-ai/schemastery" "^3.18.1"
+
+"@deepseek-ai/dsh-session-title-llm@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-session-title-llm/-/dsh-session-title-llm-0.1.1-rc.1.tgz#193834bfa3a763b73f12dacfb8e7c00fbb6ade70"
+  integrity sha512-vROiHtfX8VBeRKfDsnFufP23iZHjxMKUC2Fvct9QbWG4iohaAYT8fAfkzyVcZTE3Mgr1AuSzIiRtiwUUheiZtg==
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
@@ -1246,6 +1312,11 @@
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
+"@deepseek-ai/dsh-shell@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-shell/-/dsh-shell-0.1.1-rc.1.tgz#6d02acc6264cf683d02be2efcae402d274ab6540"
+  integrity sha512-3D92e9P6qEfLipJvTSzg5voTLydjxiC5glLJpW/1Jg2HZ3OFJ/sr/2GOIjSNNYViRYOXK9HsfvYURUAFHmQGTg==
+
 "@deepseek-ai/dsh-skill-badge@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-skill-badge/-/dsh-skill-badge-0.1.1-rc.1.tgz#32fc6e3fb2c7e87f81ea9047eb3bc42f0c6dac39"
@@ -1281,6 +1352,11 @@
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
+"@deepseek-ai/dsh-spill@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-spill/-/dsh-spill-0.1.1-rc.1.tgz#9307aeaf6533c8bceab45fa2169a3a0e9e1da016"
+  integrity sha512-PK1A1YxQVgisWacljbHAyL2z3MGXE+GWeXzNf2hHElzmtAkv412a3TXtMTL5XLZ1m0laLZxstEcf8L+S4zxvPQ==
+
 "@deepseek-ai/dsh-storage-domain@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-storage-domain/-/dsh-storage-domain-0.1.1-rc.1.tgz#6379624de94a0100bbad67465e4168e148ad37c9"
@@ -1308,6 +1384,11 @@
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
 
+"@deepseek-ai/dsh-subagent-in-process-driver@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-subagent-in-process-driver/-/dsh-subagent-in-process-driver-0.1.1-rc.1.tgz#bbf7ab9076f074dd183dd196353415229f5499c1"
+  integrity sha512-zp3HCvf8EPz6Ey0tD0d9+q6FeA0eVTvlBo3+N6m21+SrF8fp47Fb6kFgJ9zoBh4vNGXZ7bDZ/LOhYg4TlotBQg==
+
 "@deepseek-ai/dsh-subagent-spawn-in-process@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-subagent-spawn-in-process/-/dsh-subagent-spawn-in-process-0.1.1-rc.1.tgz#970f71a056cd49bf435875a0fd883b2c81053eb1"
@@ -1330,7 +1411,7 @@
     koffi "^3.1.0"
     node-pty "1.2.0-beta.15"
 
-"@deepseek-ai/dsh-subprocess@^0.1.1-rc.1":
+"@deepseek-ai/dsh-subprocess@0.1.1-rc.1", "@deepseek-ai/dsh-subprocess@^0.1.1-rc.1":
   version "0.1.1-rc.1"
   resolved "https://registry.npmjs.org/@deepseek-ai/dsh-subprocess/-/dsh-subprocess-0.1.1-rc.1.tgz#2b073036b53f6d97bab597714b9773d58d05ef52"
   integrity sha512-SXd/WT2SddMYUhCno518bmOdv6SqH9OX4X/u2uVzgT793UJ1bNtx5UZiTIox3jZFZXeSj+snthuzCiZfnA2j+A==
@@ -1361,6 +1442,11 @@
   integrity sha512-MIk6ID6LDDaP0NstVY0D36+qIzB1X35fC85PXsTr/b8g9ccu4GVod6ohunnhD6RcHQ76qHtVcKhtu+AoiFpebQ==
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
+
+"@deepseek-ai/dsh-timeout@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-timeout/-/dsh-timeout-0.1.1-rc.1.tgz#f786017b9901405d08a7adba5f5545f5de1944ef"
+  integrity sha512-9JURjw8lFbSAQogQiN7KvNAJc7WdUMdrj1PkcZEs3y0rMuTb4Z0+l0QS628+BzmKzB2ndZs8QO8VJSMTSdpaIQ==
 
 "@deepseek-ai/dsh-tmux-context@^0.1.1-rc.1":
   version "0.1.1-rc.1"
@@ -1653,6 +1739,11 @@
   integrity sha512-i569BFPdkc7OU/kfcJvRH59GGz9wXmUR5pc6pPVZLNkpPvaqiOgThnK3D4wSfq9SkxuzK4026IwITsUJF2poig==
   dependencies:
     "@deepseek-ai/schemastery" "^3.18.1"
+
+"@deepseek-ai/dsh-workflow@0.1.1-rc.1":
+  version "0.1.1-rc.1"
+  resolved "https://registry.npmjs.org/@deepseek-ai/dsh-workflow/-/dsh-workflow-0.1.1-rc.1.tgz#db094b18bbbf7c50f60527d177c040a74438f31a"
+  integrity sha512-Q7Vq+oqklhlM9XeQp+LmOZDWXCvxSQHdFjY1p5DxUOgJgLCcoNe+0QsOwH7VHm99ZfTtGisH/t7oWx+m7fbcHA==
 
 "@deepseek-ai/dsh-workspace@^0.1.1-rc.1":
   version "0.1.1-rc.1"

@@ -17,13 +17,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.22.0
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run dist:mac
+          cache: yarn
+      - run: corepack enable
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: yarn dist:mac
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
-      - run: npm run test:packaged
+      - run: yarn test:packaged
       - name: Create checksum
         run: shasum -a 256 dist/*.dmg > dist/SHA256SUMS.txt
       - name: Upload build artifact

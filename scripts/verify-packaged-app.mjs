@@ -25,7 +25,8 @@ const requiredPackages = [
   '@deepseek-ai/dsh-subagent-in-process-driver',
   '@deepseek-ai/dsh-subprocess',
   '@deepseek-ai/dsh-timeout',
-  '@deepseek-ai/dsh-workflow'
+  '@deepseek-ai/dsh-workflow',
+  '@deepseek-ai/dsh'
 ]
 
 for (const packageName of requiredPackages) {

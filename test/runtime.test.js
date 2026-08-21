@@ -6,10 +6,18 @@ import test from 'node:test'
 import { buildDshEnvironment, findAvailablePort, waitForServer } from '../src/runtime.js'
 
 const packageJsonPath = fileURLToPath(new URL('../package.json', import.meta.url))
+const packagedRuntimeCheckPath = fileURLToPath(new URL('../scripts/verify-packaged-app.mjs', import.meta.url))
 
 test('bundles the current DeepSeek Harness release', async () => {
   const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf8'))
   assert.equal(packageJson.dependencies['@deepseek-ai/dsh'], '0.1.1-rc.1')
+  assert.equal(packageJson.dependencies['@deepseek-ai/dsh-timeout'], '0.1.1-rc.1')
+})
+
+test('packaged runtime check targets the current DSH dependency graph', async () => {
+  const runtimeCheck = await readFile(packagedRuntimeCheckPath, 'utf8')
+  assert.match(runtimeCheck, /'@deepseek-ai\/dsh'/)
+  assert.match(runtimeCheck, /'@deepseek-ai\/dsh-timeout'/)
 })
 
 test('findAvailablePort returns a bindable port', async () => {
